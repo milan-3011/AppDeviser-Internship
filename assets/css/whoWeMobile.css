@@ -1,0 +1,135 @@
+@media (max-width: 1110px){
+    .banner{
+        height: 500px;
+        background-size: 100% 50%;
+    }
+   
+    /* build futur */
+    .build-future{
+        flex-direction: column;
+    }
+
+    /* ad stand */
+    .AD-stand .main-text{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* team work */
+    .team-work .team-image img{
+        height: 300px;
+    }
+    .text-team .main-text h4{
+        font-size: large;
+    }
+    .text-team p{
+        font-size: small;
+    }
+    
+    /* boxes */
+    .boxes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxes .box{
+        margin: 30px;
+    }
+
+    /* que */
+    .que p{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 600px){
+    .banner{
+        height: 350px;
+        background-size: 100% 70%;
+        background-position-y: 15%;
+    }
+   
+    /* build futur */
+    .build-future .image img{
+        width: 100%;
+    }
+
+    /* team work */
+    .team-work .team-image img{
+        height: 300px;
+    }
+
+    /* ad stand */
+
+    .icons .icons-text{
+        margin: 0%;
+        width: 150px;
+    }
+    .icons-text h6{
+        font-size: 10px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+    .icons i{
+        margin-bottom: 5%;
+        font-size: large;
+        padding: 10%;
+    }
+
+    /* text team */
+    .text-team{
+        width: 50%;
+    }
+    .text-team .main-text h4{
+        font-size: small;
+    }
+    .text-team p{
+        font-size: 10px;
+    }
+    .v-line{
+        height: 100px !important;
+    }
+    
+    /* boxes */
+    .boxes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxes .box{
+        margin: 30px;
+        width: 250px;
+        height: 200px;
+    }
+
+    /* que */
+    .que h3{
+        font-size: small;
+        padding: 4%;
+    }
+    .que p{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 300px){
+    .icons .icons-text{
+        width: 100px;
+    }
+    .icons i{
+        font-size: small;
+        padding: 15%;
+    }
+    /* text team */
+    .text-team .main-text h4{
+        font-size: 10px;
+    }
+    .text-team p{
+        font-size: 6px;
+    }
+    .v-line{
+        height: 80px !important;
+    }
+}
+
+

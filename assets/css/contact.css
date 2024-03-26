@@ -1,0 +1,129 @@
+.drop{
+    display: flex;
+    height: max-content;
+}
+.drop h1{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 100px;
+    font-weight: 700;
+}
+.drop p{
+    margin-top: 10%;
+    width: 30%;
+    color: rgb(157, 157, 157);
+    font-weight: bold;
+    margin-right: 5%;
+    margin-left: 15% ;
+}
+.hello-form{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    margin-top: 5%;
+}
+.hello{
+    width: 50%;
+    padding-left: 5%;
+}
+.forms{
+    margin: 0;
+    width: 50%;
+    margin-left: 5%;
+    color: white !important;
+    margin-bottom: 5%;
+}
+
+.forms input,
+.forms textarea {
+    border: 0;
+    margin-bottom: 5%;
+    width: 40%;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    margin-right: 2%;
+    color: white; 
+}
+
+.forms input:focus,
+.forms textarea:focus {
+    border: 0;
+    border-bottom: 1px solid white;
+    outline: none; 
+}
+
+.forms textarea {
+    width: 82%;
+    height: 40px;
+}
+
+.forms button {
+    margin-top: 5%;
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+}
+
+.forms button:hover {
+    background: linear-gradient(180deg, #5A76FE 0%, #FD02FD 100%);
+}
+
+@media (max-width:1110px) {
+    .forms textarea {
+        width: 300px;
+    }
+}
+@media (max-width:600px) {
+    .drop{
+        flex-direction: column;
+    }
+    .drop h1{
+        width: 100%;
+        margin-top: 3%;
+        padding-left: 5%;
+        margin-left: 0;
+        font-size: 70px;
+    }
+    .drop p{
+        margin-top: 10%;
+        width: 95%;
+        font-weight: bold;
+        margin-right: 2%;
+        margin-left: 5% ;
+    }
+
+    .hello-form{
+        flex-direction: column;
+        height: 90vh;
+    }
+    .hello{
+        width: 100%;
+    }
+    .forms{
+        margin: 0;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .forms input,
+    .forms textarea {
+        width: 250px;
+    }
+    
+}
+@media (max-width:300px) {
+    .drop h1{
+        font-size: 45px;
+    }
+    .drop p{
+        font-weight: lighter;
+    }
+    .forms button {
+        font-size: smaller;
+    }
+}

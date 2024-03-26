@@ -1,0 +1,355 @@
+.appDev{
+    margin: 5%;
+    display: flex;
+    position: relative;
+}
+.appDev hr{
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    height: 2px !important;
+}
+.appDev h1{
+    font-weight: 700;
+    font-size: 50px;
+    width: fit-content;
+    animation: scroll-left 1.2s forwards ease-in-out;
+    opacity: 0;
+}
+@keyframes scroll-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.right-para{
+    width: 70%;
+    margin: 0 0 0 10%;
+}
+.small-para{
+    display: flex;
+    margin-bottom: 5%;
+}
+.small-para p{
+    margin: 0 2%;
+    color: rgb(204, 204, 204);
+}
+.app-info ul{
+    column-count: 2;
+    color: rgb(204, 204, 204);
+}
+.app-info ul li{
+    list-style: none;
+    margin-bottom: 6%;
+}
+.imgNtext{
+    text-align: center;
+    position: relative;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed #FD02FD;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    bottom: 10%;
+    right: 70%;
+    animation: round infinite 5s alternate-reverse ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+@keyframes round{
+    0%{
+        transform: rotate(0deg) translateX(-400px);
+        border: 2px dashed #5A76FE;
+    }
+    100%{
+        transform: rotate(180deg) translateX(0px);
+    }
+}
+.circle2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed #5A76FE;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+    animation: round2 infinite 5s alternate-reverse ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+@keyframes round2{
+    0%{
+        transform: rotate(90deg) translateX(0px);
+        border: 2px dashed #FD02FD;
+    }
+    100%{
+        transform: rotate(0deg) translateX(300px);
+    }
+}
+
+/* images */
+.imagesPara{
+    display: flex;
+    margin: 5%;
+    height: 50vh;
+
+}
+.firstImage{
+    background-image: url("https://student.fbiz.in/march2024/milanpatel/assets/images/officecode.jpg");
+    background-size: 60% 100%;
+    background-attachment: fixed;
+    width: 60%;
+}
+.secondImage {
+    width: 30%;
+    margin-left: 3%;
+}
+.secondImage img{
+    width: 500px;
+    height: 50vh;
+}
+
+
+/* four-cards */
+.disNDes{
+    display: flex;
+    margin: 10% 5% 10% 5%;
+    position: relative;
+}
+.four-cards{
+    margin: 0 2%;
+    width: 300px;
+}
+
+.four-cards p{
+    color: rgb(204, 204, 204);
+    font-size: small;
+    margin-top: 7% !important;
+    word-spacing: 5px;
+}
+.four-cards h5, .four-cards p{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.lineClass{
+    height: 150px;
+    width: 1px !important;
+    background: linear-gradient(180deg, #5A76FE 0%, #FD02FD 100%);
+    position: absolute;
+    top: 0;
+}
+
+/* main line */
+.showingOf{
+    height: fit-content;
+    overflow: hidden;
+    margin: 5%;
+}
+.showOf{
+    font-style: italic;
+    width: 40%;
+}
+
+
+/* clent meeting */
+.meetingImg img{
+    width: 60%;
+    height: 300px;
+    margin-left: 30%;
+    margin-bottom: 7%;
+}
+.clientMeet p{
+    width: 40%;
+    font-size: 20px;
+    margin-left: 10%;
+    line-height: 40px;
+}
+.clientMeet p::first-letter{
+    margin-left: 20% !important;
+    font-size: 30px;
+}
+
+/* technologies */
+.techno{
+    text-align: center;
+    margin: 10%;
+}
+.techno h1{
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+.tech-logo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+.technology{
+    margin: 0 4%;
+}
+.tech-logo .technology img{
+    width: 100px;
+}
+
+/* QUESTIONS */
+.que{
+    margin: 10%;
+    text-align: center;
+}
+.que h3{
+    border: 1px solid white;
+    width: fit-content;
+    margin: auto;
+    padding: 1%;
+    border-radius: 100px;
+    color: #5A76FE;
+}
+.que p{
+    margin-top: 2%;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
+/* @ for mobile */
+
+@media (max-width: 1110px){
+    .appDev h1 {
+        font-size: 30px;
+        margin-top: 10%;
+    }
+    .right-para{
+        margin-left: 5%;
+    }
+    .small-para{
+        flex-direction: column;
+    }
+    .small-para .oneP{
+        margin-bottom: 10%;
+    }
+    .app-info ul {
+       padding-left: 0%;
+    }
+    .imagesPara {
+        height: 25vh;
+    }
+    .firstImage {
+        width: 70%;
+    }
+    .secondImage img {
+        width: 200px;
+        height: 15vh;
+    }
+    .disNDes {
+        margin: 5%;
+        flex-wrap: wrap;
+    }
+    .four-cards{
+        margin: 2% auto;
+        position:  relative !important;
+    }
+    .meetingImg img {
+        width: 65%;
+        height: 200px;
+    }
+    .clientMeet p {
+        text-align: justify;
+        width: 50%;
+    }
+    .showOf{
+        width: 60%;
+    }
+    .techno{
+        margin: 5%;
+    }
+    .technology{
+        margin: 2% 5%;
+    }
+    .que p{
+        font-size: 45px;
+    }
+
+}
+
+@media (max-width: 600px){
+    .appDev{
+        flex-direction: column;
+    }
+    .circle, .circle2{
+        display: none;
+    }
+    .right-para{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+    .right-para hr{
+        margin: 10% 0;
+    }
+    .app-info ul{
+        column-count: 1;
+    }
+    .imagesPara{
+        flex-direction: column;
+        height: 60vh;
+    }
+    .firstImage{
+        width: 50vb;
+        height: 100%;
+        background-size: 100% 100%;
+    }
+    .secondImage img {
+        width: 50vb;
+        height: 25vh;
+        margin-top: 10%;
+    }
+    .secondImage{
+        margin: 0;
+    }
+    .four-cards{
+        margin: 5%;
+    }
+    .meetingImg img {
+        width: 95%;
+        height: 150px;
+        margin: 2%;
+    }
+    .clientMeet p{
+        width: 90%;
+        margin: 10% 2%;
+    }
+    .technology {
+        margin: 5% 8%;
+    }
+    .showOf{
+        width: 100%;
+    }
+    /* que */
+    .que h3{
+        font-size: small;
+        padding: 4%;
+    }
+    .que p{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 300px){
+    .imagesPara{
+        height: 50vh;
+    }
+    .firstImage{
+        width: 40vb;
+    }
+    .secondImage img {
+        width: 40vb;
+    }
+    
+}

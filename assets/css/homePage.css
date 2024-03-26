@@ -1,0 +1,850 @@
+*{
+    font-family: "Comfortaa", sans-serif;
+}
+body{
+    color: white !important;
+    margin: 0;
+    padding: 0;
+    background-color: black !important;
+}
+.nav{
+    background-color: rgb(0, 0, 81);
+    color: white;
+    padding: 10px;
+}
+.nav-first, .nav-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav-first h6{
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+.nav-first a{
+    text-decoration: none;
+    color:  #FD02FD;
+    font-weight: bold;
+}
+.nav-first a:hover{
+    color:  #5A76FE;
+    margin: 0;
+    padding: 0;
+}
+.nav-first button{
+    border-radius: 20px;
+    background-color: #5A76FE;
+    color: white;
+    border: 0px;
+    padding: 3px 10px;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+}
+.nav-first button:hover{
+    transform: scale(1.1);
+}
+.nav-table tr td{
+    padding-left: 10px;
+}
+.horizontal{
+    color: gray;
+}
+.nav-table tr td i{
+    color: #5A76FE;
+    opacity: 0.8;
+}
+.nav-table tr td i:hover{
+    opacity: 1;
+    color: #FD02FD;
+}
+
+/* header */
+header{
+    padding: 10px;
+    color: white;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    top: 0 !important;
+    transition: all 1s ease-in-out;
+}
+header.scrolled{
+    background-color: navy;
+}
+.header-cls{
+    display: flex;
+    align-items: center;
+}
+.logo-first{
+    display: flex;
+}
+.logo{
+    width: 60px;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+header.scrolled .logo{
+    width: 50px;
+}
+.logo-name{
+    margin-left: 10px;
+}
+.logo-name a{
+    text-decoration: none;
+    color: white;
+}
+.logo-name a:hover{
+    color: white;
+}
+.logo-name h5, .logo-name p{
+    margin: 0;
+    padding: 0;
+}
+.logo-name a h5{
+    font-size: 27px;
+    font-weight: bold;
+    transition: all 1s ease-in-out;
+}
+header.scrolled .logo-name a h5{
+    font-size: 20px;
+}
+.logo-name a p{
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+}
+header.scrolled .logo-name a p{
+    font-size: 14px;
+}
+
+.manuBar{
+    display: flex;
+    justify-content: end;
+}
+.navbar-links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+}
+.manuBar ul li a{
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.main-dropdown:hover, .main-dropdown.hovered{
+    color: #FD02FD;
+    font-weight: bold;
+}
+.main-dropdown::after, .main-dropdown.hovered::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    height: 3px ;
+    width: 100%;
+    left: 0;
+    background-color: #5A76FE;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+.main-dropdown:hover::after, .main-dropdown.hovered::after{
+	transform: scaleX(1);
+}
+
+.hamburger {					/* *Icons*/
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/* header dropdown */
+.sub-ul{
+    position: absolute;
+    list-style: none;
+    top: 28px;
+    left: 10px;
+    flex-direction: column;
+    background-color: black;
+    padding: 0;
+    display: none;
+    width: max-content;
+}
+header.scrolled .sub-ul{
+    background-color: navy;
+}
+
+@media (min-width: 1110px){
+    .manuBar ul li:hover .sub-ul {
+        display: block !important;
+    }
+}
+
+
+.sub-ul li{
+    padding: 10px 0;    
+}
+.sub-ul li a{
+    margin: 10px 0;
+}
+.sub-ul li a:hover{
+    color: #5A76FE !important;
+}
+.sub-ul li a::after{
+    font-weight: bold;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    height: 2px ;
+    width: 100%;
+    left: 0;
+    background-color: #FD02FD;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+.sub-ul li a:hover::after{
+	transform: none;
+}
+.drop-btn{
+    display: none !important;
+}
+
+
+/* @ main body */
+#main-body{
+    z-index: 100;
+    position: relative;
+    background-color: black;
+}
+
+/* carousel started here */
+#mycarousel{
+    margin: 20px ;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1; 
+}
+.carousel-img{
+    height: 600px;
+}
+
+.carousel-caption {
+    right: 10% !important;
+    color: black !important;
+    top: 30% !important;
+    width: 40%;
+    float: right !important;
+    left: 58% !important;
+    text-align: left !important;
+    padding-left: 5%;
+}
+.carousel-control-prev, .carousel-control-next{
+    width: 5% !important;
+}
+.carousel-caption p{
+    font-size: larger;
+    font-weight: bolder;
+    animation: scroll-down 1.2s forwards ease-in-out;
+    opacity: 0;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.carousel-caption h2{
+    font-weight: bold;
+    animation: scroll-up 1.2s forwards ease-in-out;
+    opacity: 0;
+}
+@keyframes scroll-up{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* carousel completed here */
+
+/* now about client project */
+
+.clientProj{
+    margin-top: 80px ;
+}
+.clients, .squads{
+    display: flex;
+    margin: 0% 50%;
+}
+.projects{
+    display: flex;
+    margin: 15% 30%;
+}
+.clients div, .projects div, .squads div{
+    margin-left: 10px;
+}
+.clients h1, .projects h1, .squads h1{
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 0;
+}
+.clients div h5, .projects div h5, .squads div h5{
+    margin: 0;
+}
+.clients div p, .projects div p, .squads div p{
+    margin-left: 30px;
+    color: gray;
+    justify-content: end;
+    font-size: small;
+}
+.line{
+    display: block;
+    width: 25%;
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    left: 8%;
+}
+
+.build{
+    text-align: center;
+}
+.build h1{
+    font-size: 60px;
+    margin-left: 30% ;
+    font-weight: 50;
+    text-align: left;
+}
+.build img{
+    width: 180px;
+    height: auto;
+}
+
+.solution{
+    display: flex;
+    align-items: end;
+    margin-top: 10%;
+}
+.solution p{
+    font-size: 8px;
+    margin-right: 50px;
+}
+.solution h1, .scalable{
+    font-size: 60px;
+}
+.scalable{
+    margin-left: 20px;
+}
+.agile-text{
+    font-size: small;
+    margin-right: 20%;
+}
+.line2{
+    display: block;
+    width: 5%;
+    height: 2px;
+    background-color: rgb(177, 177, 177);
+    position: absolute;
+}
+
+/* global collaboration */
+.global-partner{
+    padding: 5% 20px 5% 20px !important;
+    text-align: center !important;
+    background-image: url("https://student.fbiz.in/march2024/milanpatel/assets/images/parallex.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.partners{
+    margin: 5% 0px;
+}
+.partners h1{
+    font-size: 70px;
+    font-weight: 700;
+}
+.img-global img{
+    width: auto;
+    height: 100px;
+    margin: 0 20px;
+}
+
+/* 3d worth */
+.Quote{
+    text-align: center;
+    margin: 100px 0 !important;
+}
+.threeD{
+    font-size: 100px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.QuoteLine{
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+/* who we are */
+.SubTopics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+    text-align: left;
+}
+.txt{
+    background-color: black;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+    width: 1000px;
+    padding: 2%;
+    position: relative;
+    left: 100px;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-box-shadow: -9px 9px 30px -16px rgba(255,255,255,1);
+    -moz-box-shadow: -9px 9px 30px -16px rgba(255,255,255,1);
+    box-shadow: -9px 9px 30px -16px rgba(255,255,255,1);
+    border-radius: 20px;
+}
+.txt i{
+    color: gray;
+}
+.txt h2{
+    color: #5A76FE;
+}
+.txt p{
+    line-height: 30px;
+    word-spacing: 3px;
+}
+.imgPottery{
+    width: 500px;
+    margin-right: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.imgPottery img{
+    width: 500px;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+.SubTopics:hover .imgPottery img{
+    transform: scale(1.1);
+}
+
+/* middle line */
+.end-text{
+    margin: 10%;
+    background-color: rgb(5, 5, 106);
+    text-align: center;
+    padding: 25px;
+}
+.end-text h2{
+    margin-bottom: 20px;
+}
+
+/* what we do */
+.SubTopicTWO{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+    text-align: left;
+}
+.txtTWO{
+    background-color: black;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    width: 70%;
+    padding: 2%;
+    position: relative;
+    right: 5%;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-box-shadow: 10px 10px 30px -16px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 30px -16px rgba(255,255,255,1);
+    box-shadow: 10px 10px 30px -16px rgba(255,255,255,1);
+    border-radius: 20px;
+    
+}
+.txtTWO i{
+    color: gray;
+}
+.txtTWO h2{
+    color: #5A76FE;
+}
+.txtTWO p{
+    line-height: 30px;
+    word-spacing: 3px;
+}
+.imgPotteryTWO{
+    height: 500px;
+    margin-left: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.imgPotteryTWO img{
+    height: 500px;
+    transition: all 1s ease-in-out;
+}
+.SubTopicTWO:hover .imgPotteryTWO img{
+    transform: scale(1.1);
+}
+
+/* trust parallex effect */
+.mainParralexDiv{
+    width: 100%;
+}
+.Parralex{
+    margin-top: 10%;
+    text-align: center;
+    height: 50vh;
+    position: sticky;
+    top: 30%;
+    overflow-x: hidden;
+}
+.trust{
+    font-size: 170px;
+    font-weight: bold;
+    margin-top: 200px;
+    width: 80%;
+    margin: auto;
+	background: linear-gradient(180deg, #5A76FE 0%, #FD02FD 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    transform: translateX(100PX);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.Parralex.active .trust{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.fuels{
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 80px;
+    background: linear-gradient(180deg, #FD02FD 0%, #5A76FE 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    transform: translateX(-100PX);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.Parralex.active .fuels{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.parralex-item{
+    padding-bottom: 90vh;
+    transform: translateZ(0);
+}
+
+/* box-1 */
+.Box1{
+    background-color: rgba(0, 0, 255, 0.9);
+    width: fit-content;
+    padding: 2%;
+    position: relative;
+    left: 15%;
+    overflow: hidden; /* Ensure the overflow is hidden to hide pseudo-element */
+    transition: background-color 0.3s ease;
+}
+.Box1 ul{
+    list-style-type:none;
+    margin-top: 10% !important;
+    font-weight: bold;
+}
+.webD {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease; 
+}
+.Box1:hover .webD{
+    color: black;
+}
+.webD::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%; 
+    width: 0%;
+    height: 100%;
+    background-color: #FD02FD;
+    transition: all 0.3s ease; 
+}
+.Box1:hover .webD::before {
+    width: 100%;
+    left: 0%; 
+}
+
+/* box-2 */
+.Box2{
+    background-color: rgba(0, 0, 255, 0.9);
+    width: fit-content;
+    padding: 2%;
+    position: relative;
+    left: 60%;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    margin: 10% 0;
+}
+.Box2 ul{
+    list-style-type:none;
+    margin-top: 10% !important;
+    font-weight: bold;
+}
+.webD2 {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease; 
+}
+.Box2:hover .webD2{
+    color: black;
+}
+.webD2::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%; 
+    width: 0%;
+    height: 100%;
+    background-color: #FD02FD;
+    transition: all 0.3s ease; 
+}
+.Box2:hover .webD2::before {
+    width: 100%;
+    left: 0%; 
+}
+
+/* bottom-line */
+.BottomLine{
+    border-top: 5px double white;
+    border-bottom: 5px double white;
+    color: white;
+    padding: 3%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.BottomLine h1{
+    line-height: 200%;
+    word-spacing: 5px;
+}
+.b2{
+    color: red;
+}
+.b3{
+    color: blue;
+}
+.b1{
+    background: linear-gradient(180deg, #5A76FE 0%, #FD02FD 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* footer */
+#footer{
+    z-index: 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+footer{
+    background-color: rgb(0, 0, 57);
+    margin: 0;
+    padding: 0;
+}
+.mainfooter{
+    display: flex;
+    align-items: center;
+}
+.leftFooter{
+    width: 30%;
+    padding: 2%;
+    margin-left: 5%;
+}
+.leftLogo{
+    display: flex;
+    align-items: center;
+}
+.Flogo-name{
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+}
+.Flogo-name h1, .Flogo-name h3{
+    margin: 0;
+    padding: 0;
+}
+.leftFooter img{
+    width: auto;
+    height: 80px;
+    margin-right: 10%;
+}
+.leftText p{
+    margin-top: 10%;
+    font-weight: 100;
+    color: rgb(192, 192, 192);
+    width: 90%;
+}
+.centFooter{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.centFooter i{
+    padding: 5%;
+    font-size: x-large;
+    border: 1px solid rgb(61, 61, 61);
+    width: 100px;
+    text-align: center;
+    height: 60px;
+}
+.centFooter i:hover{
+    background: linear-gradient(90deg, #5a75fedc 0%, #fd02fdc0 100%);
+    color: black;
+    font-weight: 700;
+}
+.rightFooter{
+    width: 35%;
+}
+.rightFooter h1{
+    font-size: 80px;
+    font-weight: 700;
+    animation: lets infinite 5s forwards linear;
+    transition: all 1s ease-in-out;
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+}
+@keyframes lets {
+    0% {
+        background: linear-gradient(180deg, #5A76FE 0%, #FD02FD 100%);
+        transform: scale(0.9);
+    }
+    50% {
+        background: linear-gradient(90deg, #FD02FD 0%, #5A76FE 100%);
+        transform: scale(1.1);
+    }
+    100% {
+        background: linear-gradient(180deg, #FD02FD 0%, #5A76FE 100%);
+        transform: scale(0.9);
+    }
+}
+
+.Copyright{
+    width: 100%;
+    text-align: center;
+    color: rgb(192, 192, 192);
+    margin-bottom: 0 !important;
+    padding-bottom: 10px;
+}
+
+
+@media (min-width: 1110px){
+    .cursor-round{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #5A76FE;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transition: 0.2s;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+    }
+    
+    .cursor-point{
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background-color: #FD02FD;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transition: 0.4s;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+    }
+    
+}
+
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 90PX;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+    }
+}

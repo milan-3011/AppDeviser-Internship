@@ -1,0 +1,92 @@
+@media (max-width: 1110px){
+    .banner{
+        height: 500px;
+        background-size: 100% 50%;
+    }
+    .power{
+        flex-direction: column;
+    }
+    .Our-services{
+        margin: 50px;
+    }
+    .Our-services .imgs .img:hover img{
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+    .Our-services .imgs{
+        margin-top: 5%;
+    }
+    .start{
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px){
+    .banner{
+        height: 350px;
+        background-size: 100% 70%;
+        background-position-y: 15%;
+    }
+    .banner h1{
+        font-size: larger;
+    }
+    .banner p{
+        font-size: small;
+    }
+
+    .Perfect-solution h3{
+        font-size: larger;
+    }
+    .Perfect-solution h5{
+        font-size: medium;
+        font-weight: lighter;
+    }
+
+
+    .power{
+        flex-direction: column;
+        margin-top: 20% !important;
+    }
+    .power .image img{
+        width: 100%;
+    }
+
+    .Our-services{
+        margin: 0px !important;
+        padding: 50px;
+        background-color: rgb(25, 25, 25);
+    }
+    .Our-services h1{
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+    .Our-services .imgs{
+        flex-direction: column;
+    }
+    .Our-services .imgs .img{
+        margin: 15% 0%;
+    }
+
+    .serve{
+        margin: 5%;
+    }
+    .serve h1{
+        margin: 10% 0;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+    .ind-icons{
+        justify-content: space-between !important;
+    }
+    .ind-icons .one-icon{
+        width: 150px;
+        margin: 20px 0 ;
+    }
+    
+    .start{
+        flex-direction: column;
+    }
+    .start img{
+        width: 100%;
+        height: 300px;
+    }
+}
