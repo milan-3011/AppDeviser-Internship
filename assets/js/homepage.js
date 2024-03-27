@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-    $("#header").load("../general/header.html", function() {
+    $("#header").load("assets/general/header.html", function() {
         // Code to execute after loading header.html
         let hamburgers = document.getElementsByClassName("hamburger");
 
@@ -90,11 +90,15 @@ const scrollingparallax = () => {
     showOf.style.transform = `translate3d(0px, ${translateY}%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
   };
   
-window.addEventListener('scroll', scrollingparallax);
+window.addEventListener('scroll', () => {
+    if (document.querySelector('.Parralex') || document.querySelector('.showOf')) {
+        scrollingparallax();
+    }
+});
 
 
 $(function(){
-  $("#footer").load("../general/footer.html");
+  $("#footer").load("../assets/general/footer.html");
 });
 
 let cursorRound = document.querySelector(".cursor-round");
