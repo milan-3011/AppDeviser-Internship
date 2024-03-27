@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-    $("#header").load("/assets/general/header.html", function() {
+    $("#header").load("../general/header.html", function() {
         // Code to execute after loading header.html
         let hamburgers = document.getElementsByClassName("hamburger");
 
@@ -94,7 +94,7 @@ window.addEventListener('scroll', scrollingparallax);
 
 
 $(function(){
-  $("#footer").load("/assets/general/footer.html");
+  $("#footer").load("../general/footer.html");
 });
 
 let cursorRound = document.querySelector(".cursor-round");

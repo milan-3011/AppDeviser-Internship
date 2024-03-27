@@ -102,7 +102,7 @@
 
 }
 .firstImage{
-    background-image: url("../assets/images/officecode.jpg");
+    background-image: url("/assets/images/officecode.jpg");
     background-size: 60% 100%;
     background-attachment: fixed;
     width: 60%;
