@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-    $("#header").load("../general/header.html", function() {
+    $("#header").load("https://milan-3011.github.io/AppDeviser-Internship/general/header.html", function() {
         // Code to execute after loading header.html
         let hamburgers = document.getElementsByClassName("hamburger");
 
@@ -99,7 +99,7 @@ window.addEventListener('scroll', () => {
 
 
 $(function(){
-  $("#footer").load("../general/footer.html");
+  $("#footer").load("https://milan-3011.github.io/AppDeviser-Internship/general/footer.html");
 });
 
 let cursorRound = document.querySelector(".cursor-round");
