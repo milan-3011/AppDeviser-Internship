@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-    $("#header").load("https://milan-3011.github.io/AppDeviser-Internship/general/header.html", function() {
+    $("#header").load("../general/header.html", function() {
         // Code to execute after loading header.html
         let hamburgers = document.getElementsByClassName("hamburger");
 
@@ -65,40 +65,41 @@ $( document ).ready(function(){
 });
 
 const scrollingparallax = () => {
-    let parallex = document.querySelectorAll('.Parralex');
+  let parallex = document.querySelectorAll('.Parralex');
   
-    for (let i = 0; i < parallex.length; i++) {
-      let windowHeight = window.innerHeight;
-      let parallexTop = parallex[i].getBoundingClientRect().top;
-      let parallexPoint = 100;
+  for (let i = 0; i < parallex.length; i++) {
+    let windowHeight = window.innerHeight;
+    let parallexTop = parallex[i].getBoundingClientRect().top;
+    let parallexPoint = 100;
   
-      if (parallexTop < windowHeight - parallexPoint) {
-        parallex[i].classList.add('active');
-      } else {
-        parallex[i].classList.remove('active');
-      }
+    if (parallexTop < windowHeight - parallexPoint) {
+      parallex[i].classList.add('active');
+    } else {
+      parallex[i].classList.remove('active');
     }
+  }
 
     // show of scrolling
 
-    let showOf = document.querySelector(".showOf");
-    let windowHeight = window.innerHeight;
-    let showTop = showOf.getBoundingClientRect().top;
-    let scrollPercentage = (windowHeight - showTop) / windowHeight * 120;
-    let translateY = Math.max(0, Math.min(100, 100 - (scrollPercentage * 2)));
+  let showOf = document.querySelector(".showOf");
+  let windowHeight = window.innerHeight;
+  let showTop = showOf.getBoundingClientRect().top;
+  let scrollPercentage = (windowHeight - showTop) / windowHeight * 120;
+  let translateY = Math.max(0, Math.min(100, 100 - (scrollPercentage * 2)));
     
-    showOf.style.transform = `translate3d(0px, ${translateY}%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
-  };
+  showOf.style.transform = `translate3d(0px, ${translateY}%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+
+};
   
 window.addEventListener('scroll', () => {
-    if (document.querySelector('.Parralex') || document.querySelector('.showOf')) {
-        scrollingparallax();
-    }
+  if (document.querySelector('.Parralex') || document.querySelector('.showOf')) {
+      scrollingparallax();
+  }
 });
 
 
 $(function(){
-  $("#footer").load("https://milan-3011.github.io/AppDeviser-Internship/general/footer.html");
+  $("#footer").load("../general/footer.html");
 });
 
 let cursorRound = document.querySelector(".cursor-round");

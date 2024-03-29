@@ -360,7 +360,7 @@ header.scrolled .sub-ul{
 /* global collaboration */
 .global-partner{
     padding: 5% 20px 5% 20px !important;
-    text-align: center !important;
+    text-align: center;
     background-image: url("/assets/images/parallex.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -736,8 +736,9 @@ footer{
     animation: lets infinite 5s forwards linear;
     transition: all 1s ease-in-out;
     background: linear-gradient(90deg, #5A76FE 0%, #FD02FD 100%);
-    color: transparent !important;
-    -webkit-background-clip: text !important;
+    color: transparent ;
+    -webkit-background-clip: text;
+    background-clip: text !important;
 }
 @keyframes lets {
     0% {

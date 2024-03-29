@@ -200,7 +200,8 @@
 
     /* global partner */
     .global-partner{
-        padding: 2% 0px 5% 20px !important;       
+        padding: 2% 0px 5% 20px !important;  
+        background-attachment: scroll; 
     }
     .partners{
         margin: 5% 0px;
@@ -214,7 +215,7 @@
     .img-global img{
         width: auto;
         height: 40px;
-        margin: 10px 10px;
+        margin: 20px 10px;
     }
 
     /* 3d worth */
