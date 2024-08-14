@@ -8,7 +8,7 @@ body{
     background-color: black !important;
 }
 .banner{
-    background-image: url("https://milan-3011.github.io/AppDeviser-Internship/assets/images/belief.jpeg");
+    background-image: url("assets/images/belief.jpeg");
     background-repeat: no-repeat;
     background-size: 100% 90%;
     height: 600px;
