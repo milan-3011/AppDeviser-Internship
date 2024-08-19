@@ -39,13 +39,15 @@
                 <div class="forms">
                     <form action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="a4f63cde-f485-40bf-97e9-5004da00ba80">
-                        <input type="text" placeholder="Name*" required>
-                        <input type="email" placeholder="Email*" required >
+                        <input type="text" name="name" placeholder="Name*" required>
+                        <input type="email" name="email" placeholder="Email*" required>
                         <br>
-                        <input type="number" placeholder="Phone*" required>
-                        <input type="text" placeholder="Subject*"required>
+                        
+                        <input type="number" name="phone" placeholder="Phone*" required>
+                        <input type="text" name="subject" placeholder="Subject*" required>
                         <br>
-                        <textarea type="text" placeholder="Message*" maxlength="50" minlength="0" required></textarea><br>
+                        
+                        <textarea name="message" placeholder="Message*" maxlength="50" minlength="0" required></textarea>
                         <button type="submit">Drop a Message</button>
                     </form>
                 </div>
