@@ -154,7 +154,7 @@ const form = document.getElementById('form');
     .then(async (response) => {
       let json = await response.json();
       if (response.status === 200) {
-        result.innerHTML = "<p style='color: green;'>Your request was sent successfully! We will get in touch soon.</p>";
+        result.innerHTML = "<p style='color: green; margin-top: 10px; font-size: 16px;'><i class='fa-regular fa-circle-check fa-2xl'></i> Your request was sent successfully! We will get in touch soon.</p>";
       } else {
         console.log(response);
         result.innerHTML = "<p style='color: red;'>There was an error. Please try again.</p>";
