@@ -132,30 +132,42 @@ function loaderAnimation() {
 loaderAnimation();
 
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting in the traditional way
-    
-    // Create a FormData object with the form data
-    var formData = new FormData(this);
-    
-    // Send the form data using fetch API
-    fetch(this.action, {
-        method: this.method,
-        body: formData
+const form = document.getElementById('form');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
+    result.style.display = "block";  
+      
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
     })
-    .then(response => response.json())
-    .then(data => {
-        if(data.success) {
-            // Show success message
-            document.getElementById('formMessage').innerHTML = '<p style="color: green;">Your request was sent successfully. We will get in touch soon!</p>';
-            this.reset(); // Reset the form fields
-        } else {
-            // Show error message
-            document.getElementById('formMessage').innerHTML = '<p style="color: red;">There was an error. Please try again.</p>';
-        }
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status === 200) {
+        result.innerHTML = "<p style='color: green;'>Your request was sent successfully! We will get in touch soon.</p>";
+      } else {
+        console.log(response);
+        result.innerHTML = "<p style='color: red;'>There was an error. Please try again.</p>";
+      }
     })
     .catch(error => {
-        document.getElementById('formMessage').innerHTML = '<p style="color: red;">There was an error. Please try again.</p>';
+      console.log(error);
+      result.innerHTML = "<p style='color: red;'>Something went wrong!</p>";
+    })
+    .then(function() {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 3000);
     });
-});
-
+  });
