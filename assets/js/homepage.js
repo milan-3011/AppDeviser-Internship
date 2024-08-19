@@ -130,3 +130,32 @@ function loaderAnimation() {
   }, 4200)
 }
 loaderAnimation();
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+    
+    // Create a FormData object with the form data
+    var formData = new FormData(this);
+    
+    // Send the form data using fetch API
+    fetch(this.action, {
+        method: this.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            // Show success message
+            document.getElementById('formMessage').innerHTML = '<p style="color: green;">Your request was sent successfully. We will get in touch soon!</p>';
+            this.reset(); // Reset the form fields
+        } else {
+            // Show error message
+            document.getElementById('formMessage').innerHTML = '<p style="color: red;">There was an error. Please try again.</p>';
+        }
+    })
+    .catch(error => {
+        document.getElementById('formMessage').innerHTML = '<p style="color: red;">There was an error. Please try again.</p>';
+    });
+});
+
